@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto+Slab&display=swap");
-ddd {
-  border-width: 1px;
-  border-style: inset;
-  border-color: white;
-}
-.hidden {
-  display: none;
-}
 
 body {
   height: 100vh;
@@ -85,4 +77,13 @@ loginButton {
   color: white;
   font-size: 15px;
   padding: 0px 0px;
+}
+
+borderline {
+  border-width: 1px;
+  border-style: inset;
+  border-color: white;
+}
+.hidden {
+  display: none;
 }
