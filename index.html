@@ -7,29 +7,39 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="50"
-        type="text"
-        placeholder="What is your name"
-      />
-      <input type="submit" value="log In" />
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 class="hidden" id="greeting"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span>Clear / 33.35</span>
-      <span>Yongsan</span>
-    </div>
+    <header>
+      <div id="weather">
+        <div>Clear 33.35℃</div>
+        <div id="city">Yongsan</div>
+      </div>
+    </header>
+    <main>
+      <h2 id="clock">00:00:00</h2>
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="50"
+          type="text"
+          placeholder="What is your name"
+          class="userName"
+        />
+        <input class="loginButton" type="submit" value="log In" />
+      </form>
+      <h1 class="hidden" id="greeting"></h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </main>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>

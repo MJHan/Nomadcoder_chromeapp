@@ -1,12 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto+Slab&display=swap");
+ddd {
+  border-width: 1px;
+  border-style: inset;
+  border-color: white;
+}
 .hidden {
   display: none;
 }
 
 body {
-  overflow: hidden;
   height: 100vh;
-  margin: 0;
+  margin: 0px 0px;
+  padding: 0px 0px;
   background-size: cover;
-  opacity: 0.9;
+  background-color: black;
+  opacity: 0.8;
   z-index: -1;
+  overflow: hidden;
+  display: block;
+}
+header {
+  display: inline-block;
+  top: 0px;
+  left: 0px;
+}
+main {
+  height: 90vh;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#clock {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  mix-blend-mode: difference;
+  text-shadow: 1px 1px 1px white;
+  z-index: 3;
+  color: black;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+}
+
+#login-form {
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+/* #userName {
+  padding: 10px;
+}
+
+loginButton {
+  padding: 10px;
+  font-family: "Montserrat";
+  font-size: 15px;
+  background-color: black;
+} */
+
+#quote {
+  height: 50px;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px black;
+}
+
+#weather {
+  color: white;
+  font-family: "Nanum Gothic", serif;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  font-weight: 700;
+  font-size: 25px;
+  display: inline-block;
+  padding: 10px 10px;
+}
+
+#city {
+  color: white;
+  font-size: 15px;
+  padding: 0px 0px;
 }
