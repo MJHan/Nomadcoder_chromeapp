@@ -1,0 +1,52 @@
+body {
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.font1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+.font2 {
+  font-size: 22px;
+}
+
+input,
+button {
+  font-size: 22px;
+  width: 80px;
+}
+
+#summary {
+  font-size: 18px;
+}
+
+#result {
+  font-size: 18px;
+  padding: 10px 0px;
+}
+
+#choseNumber,
+#machineNumber {
+  color: rgb(39, 1, 255);
+  font-weight: bold;
+}
+
+.won {
+  color: tomato;
+  font-weight: bold;
+}
+
+.lost {
+  color: rgb(95, 97, 94);
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

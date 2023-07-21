@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VanillaJS Challenge Assignment#3 by MJHan</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Random Number Game</h1>
+    <form id="playForm">
+      <div class="font1">
+        <span>Generate a number between 0 and </span>
+        <input type="number" id="maxInput" required step="1" min = "0"/>
+      </div>
+      <div class="font2">
+        <span>Guess the number:</span>
+        <input type="number" id="guessInput" required step="1" min="0" />
+        <button type="submit">Play!</button>
+      </div>
+    </form>
+    <div class="hidden" id="summary">
+      <span>You chose : <span>
+      <span id="choseNumber"></span>
+      <span>, the machine chose : </span>
+      <span id="machineNumber"></span>
+    </div>
+    <div class="hidden" id="result">
+    
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
