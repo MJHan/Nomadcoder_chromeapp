@@ -10,8 +10,8 @@ async function onGeoOk(position) {
     response.json().then((data) => {
       const div = document.createElement("div");
       const i = document.createElement("i");
-      const weatherMain = data.weather[0].main;
-      i.className = getWeatherIcon(weatherMain);
+      const weatherText = data.weather[0].main;
+      i.className = getWeatherIcon(weatherText);
       div.innerText = `${data.main.temp}℃`;
       weather.appendChild(i);
       weather.appendChild(div);
@@ -21,56 +21,44 @@ async function onGeoOk(position) {
 }
 
 function getWeatherIcon(weather) {
-  switch (weather) {
-    case "Clear":
-      return "wi wi-sunny";
-      break;
-    case "Rain":
-      return "wi wi-rain";
-      break;
-    case "Drizzle":
-      return "wi wi-raindrops";
-      break;
-    case "Thunderstorm":
-      return "wi wi-thunderstorm";
-      break;
-    case "Snow":
-      return "wi wi-snow";
-      break;
-    case "Clouds":
-      return "wi wi-cloudy";
-      break;
-    case "Mist":
-      return "wi wi-showers";
-      break;
-    case "Smoke":
-      return "wi wi-smoke";
-      break;
-    case "Haze":
-      return "wi wi-haze";
-      break;
-    case "Dust":
-      return "wi wi-dust";
-      break;
-    case "Fog":
-      return "wi wi-fog";
-      break;
-    case "Squall":
-      return "wi wi-cloudy-gusts";
-      break;
-    case "Ash":
-      return "wi wi-cloudy";
-      break;
-    case "Tornado":
-      return "wi wi-sandstorm";
-      break;
-    case "Sand":
-      return "wi wi-sandstorm";
-      break;
-    default:
-      return "wi wi-sunny";
-  }
+  return icons[weathers.findIndex((item) => item === weather)];
 }
+
+const icons = [
+  "wi wi-sunny",
+  "wi wi-rain",
+  "wi wi-raindrops",
+  "wi wi-thunderstorm",
+  "wi wi-snow",
+  "wi wi-cloudy",
+  "wi wi-showers",
+  "wi wi-smoke",
+  "wi wi-haze",
+  "wi wi-dust",
+  "wi wi-fog",
+  "wi wi-cloudy-gusts",
+  "wi wi-cloudy",
+  "wi wi-sandstorm",
+  "wi wi-sandstorm",
+];
+
+const weathers = [
+  "Clear",
+  "Rain",
+  "Drizzle",
+  "Thunderstorm",
+  "Snow",
+  "Clouds",
+  "Mist",
+  "Smoke",
+  "Haze",
+  "Dust",
+  "Fog",
+  "Squall",
+  "Ash",
+  "Tornado",
+  "Sand",
+];
 
 function onGeoError() {
   alert("Can't find you. No weather for you. 😩");
