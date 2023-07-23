@@ -24,12 +24,40 @@ header {
   display: inline-block;
   top: 0px;
   left: 0px;
+  height: 100px;
+}
+
+i {
+  font-family: "weathericons";
+  width: 35px;
+  align-items: center;
+}
+
+#weather {
+  display: flex;
+  padding: 10px 0px 0px 10px;
+  color: white;
+  font-family: "Nanum Gothic", serif;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+#city {
+  display: flex;
+  padding: 0px 10px;
+  color: white;
+  font-family: "Nanum Gothic", serif;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 main {
+  /* height: 80vh; */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -45,14 +73,14 @@ footer {
 
 #clock {
   display: flex;
-  align-items: center;
-  height: 100px;
+  align-items: end;
   z-index: 3;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 120px;
   text-shadow: 1px 1px 1px #ffffff;
   color: black;
+  height: 100px;
 }
 
 #login-form {
@@ -86,6 +114,7 @@ footer {
   font-family: "Nanum Myeongjo", serif;
   font-size: 50px;
   font-weight: 700;
+  /* text-shadow: 0.5px 0.5px 0.5px white ; */
 }
 
 #todo-div {
@@ -168,28 +197,6 @@ li {
   opacity: 0.7;
 }
 
-#weather {
-  color: white;
-  font-family: "Nanum Gothic", serif;
-  text-shadow: 0.5px 0.5px 0.5px black;
-  font-weight: 700;
-  font-size: 25px;
-  display: inline-block;
-  padding: 10px 10px;
-  height: 70px;
-}
-
-#city {
-  color: white;
-  font-size: 15px;
-  padding: 0px 0px;
-}
-
-borderline {
-  border-width: 1px;
-  border-style: inset;
-  border-color: white;
-}
 .hidden {
   display: none;
 }
