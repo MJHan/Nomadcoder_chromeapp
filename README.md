@@ -14,5 +14,5 @@
 
 ## 실행
 - 로컬 : /Users/mjhan/Workspace/Javascript/chromeapp_nomadcoder/index.html 실행
-- 
+- https://mjhan.github.io/Nomadcoder_chromeapp
 
