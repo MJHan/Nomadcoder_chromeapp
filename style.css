@@ -102,7 +102,7 @@ footer {
 }
 
 #todo-div ::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
   background-color: white;
   opacity: 0.5;
 }
@@ -121,6 +121,7 @@ footer {
   max-height: 250px;
   overflow: auto;
   padding-left: 0;
+  padding-right: 5px;
   z-index: 10;
 }
 
