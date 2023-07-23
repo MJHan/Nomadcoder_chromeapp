@@ -10,7 +10,6 @@ function onGeoOk(position) {
     response.json().then((data) => {
       weather.innerText = `${data.weather[0].main} ${data.main.temp}℃`;
       city.innerText = data.name;
-      console.log(data);
     })
   );
 }
@@ -19,4 +18,4 @@ function onGeoError() {
   alert("Can't find you. No weather for you. 😩");
 }
 
-// navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

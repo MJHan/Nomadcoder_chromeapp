@@ -10,6 +10,18 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function cancelTodo(event) {
+  event.preventDefault();
+  const li = event.target.parentElement;
+  const span = li.querySelector("span");
+  span.style.textDecoration = event.target.checked ? "line-through" : "none";
+  selectedIndex = toDos.findIndex((item) => item.id === Number(li.id));
+  toDos[selectedIndex].cancel
+    ? (toDos[selectedIndex].cancel = false)
+    : (toDos[selectedIndex].cancel = true);
+  saveToDos();
+}
+
 function deleteTodo(event) {
   event.preventDefault();
   const li = event.target.parentElement;
@@ -22,10 +34,24 @@ function paintToDo(newToDoObj) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   const button = document.createElement("button");
+  const checkbox = document.createElement("input");
+
   li.id = newToDoObj.id;
-  button.innerText = "❌";
+
+  checkbox.type = "checkbox";
+  checkbox.className = "todo-checkbox";
+  checkbox.addEventListener("change", cancelTodo);
+  checkbox.checked = newToDoObj.cancel;
+
+  button.innerText = "x";
   button.addEventListener("click", deleteTodo);
+  button.className = "todo-button";
+
   span.innerText = newToDoObj.text;
+  span.className = "todo-span";
+  span.style.textDecoration = newToDoObj.cancel ? "line-through" : "none";
+
+  li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
@@ -38,6 +64,7 @@ function handleToDoSubmit(event) {
   const newToDoObject = {
     text: newToDo,
     id: Date.now(),
+    cancel: false,
   };
   toDos.push(newToDoObject);
   paintToDo(newToDoObject);
