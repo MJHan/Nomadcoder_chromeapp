@@ -2,18 +2,16 @@ const weather = document.querySelector("#weather");
 const city = document.querySelector("#city");
 const API_KEY = "16404a0f651db6245890f34e76fc0e29";
 
-function onGeoOk(position) {
+async function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-  fetch(url).then((response) =>
+  await fetch(url).then((response) =>
     response.json().then((data) => {
       const div = document.createElement("div");
       const i = document.createElement("i");
-      console.log(data);
       const weatherMain = data.weather[0].main;
       i.className = getWeatherIcon(weatherMain);
-
       div.innerText = `${data.main.temp}℃`;
       weather.appendChild(i);
       weather.appendChild(div);
