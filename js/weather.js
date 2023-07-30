@@ -25,7 +25,7 @@ function getWeatherIcon(weather) {
 }
 
 const icons = [
-  "wi wi-sunny",
+  "wi wi-day-sunny",
   "wi wi-rain",
   "wi wi-raindrops",
   "wi wi-thunderstorm",
